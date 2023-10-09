@@ -1,0 +1,11 @@
+.text 
+ori $t1, $zero , 8
+
+ori $t2, $zero, 0
+
+volta:	beq $t1, $zero, end
+	srl $t1, $t1, 1 
+	addi $t2, $t2, 1
+	j volta
+
+end: addi $t2, $t2, 1 

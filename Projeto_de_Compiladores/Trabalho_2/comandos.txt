@@ -1,3 +1,0 @@
-javacc Lugosi.jj
-javac *.java
-java Lugosi teste.lug

@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="servicosUf">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/POO_e_PDB/ServicosUf/servicosUf/dist/servicosUf.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

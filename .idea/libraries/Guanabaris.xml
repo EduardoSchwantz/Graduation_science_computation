@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Guanabaris">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/POO_e_PDB/Guanabaris/mysql-connector-j-8.0.31.jar!/" />
+      <root url="jar://$PROJECT_DIR$/POO_e_PDB/Guanabaris/rs2xml.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/Graduation_science_computation.iml" filepath="$PROJECT_DIR$/.idea/Graduation_science_computation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/POO_e_PDB/Guanabaris/Guanabaris.iml" filepath="$PROJECT_DIR$/POO_e_PDB/Guanabaris/Guanabaris.iml" />
+      <module fileurl="file://$PROJECT_DIR$/POO_e_PDB/ServicosUf/ServicosUf.iml" filepath="$PROJECT_DIR$/POO_e_PDB/ServicosUf/ServicosUf.iml" />
+    </modules>
+  </component>
+</project>

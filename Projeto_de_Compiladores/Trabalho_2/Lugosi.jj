@@ -1,0 +1,115 @@
+PARSER_BEGIN(Lugosi)
+import java.io.*;
+public class Lugosi {
+
+  public static void main(String args[]) throws ParseException,IOException {
+    
+ Lugosi analisador = new Lugosi(new FileInputStream(args[0]));
+ analisador.Lugosi();
+  }
+
+}
+
+PARSER_END(Lugosi)
+
+SKIP :
+{
+  " "
+| "\t"
+| "\n"
+| "\r"
+}
+
+TOKEN :
+{
+  <MAIN: "main">
+| <ACHAVES: "{">
+| <FCHAVES: "}">
+| <VOID: "void">  
+| <LET: "let">
+| <FLOAT: "float">
+| <INT: "int">
+| <PV: ";">
+| <PRINT: "printIO">
+| <AT: ":=">
+| <BOOL: "bool">
+| <IF: "if">
+| <WHILE: "while">
+| <SUM: "+">
+| <SUB: "-">
+| <DIV: "/">
+| <MULT: "*">
+| <AND: "&&">
+| <OR: "||">
+| <EQUALS: "==">
+| <SMALLER: "<">
+| <BIGGER: ">">
+| <FUNC: "def">
+| <TRUE: "true">
+| <FALSE: "false">
+| <RPAREN: "(">
+| <LPAREN: ")">
+| <DO: "do">
+| <ELSE: "else">
+| <RETURN: "return">
+| <READIO: "readIO">
+}
+
+TOKEN :
+{
+  <NUM : (["0"-"9"])+("." (["0"-"9"])+)?>
+ |< ID: ["a"-"z","A"-"Z"] (["a"-"z","A"-"Z","0"-"9"])*>
+
+}
+
+
+
+void Lugosi () :
+{Token t;}
+{
+
+(
+  <MAIN> { System.out.println("Palavra reservada: main");}
+| <ACHAVES> { System.out.println("Abre chaves: {");}
+| <FCHAVES> { System.out.println("Fecha chaves: }");}
+| t=<NUM> { System.out.println("Número: "+ t.image);}
+| t=<ID> { System.out.println("Identificador: "+ t.image);}
+| <VOID> { System.out.println("Palavra reservada: void");}
+| <LET> { System.out.println("Palavra reservada: let");}
+| <FLOAT> { System.out.println("Palavra reservada: Type [float]");}
+| <INT> { System.out.println("Palavra reservada: Type [int]");}
+| <PV> { System.out.println("Ponto e Virgula: ;");}
+| <PRINT> { System.out.println("Palavra reservada: Saída padrão");}
+| <AT> {System.out.println("Atribuição: :=");}
+| <IF> { System.out.println("Palavra reservada: if");}
+| <WHILE> { System.out.println("Palavra reservada: while");}
+| <SUM> { System.out.println("Operador: +");}
+| <SUB> { System.out.println("Operador: -");}
+| <DIV> { System.out.println("Operador: /");}
+| <MULT> { System.out.println("Operador: *");}
+| <AND> { System.out.println("Operador: &&");}
+| <OR> { System.out.println("Operador: ||");}
+| <EQUALS> { System.out.println("Operador: ==");}
+| <SMALLER> { System.out.println("Operador: <");}
+| <BIGGER> { System.out.println("Operador: >");}
+| <FUNC> { System.out.println("Chamada de função: def");}
+| <TRUE> { System.out.println("Palavra reservada: true");}
+| <FALSE> { System.out.println("Palavra reservada: false");}
+| <DO> { System.out.println("Palavra reservada: do");}
+| <ELSE> { System.out.println("Palavra reservada: else");}
+| <RETURN> { System.out.println("Palavra reservada: return");}
+| <RPAREN> { System.out.println("Abre Parênteses: (");}
+| <LPAREN> { System.out.println("Fecha Parênteses: )");}
+| <READIO> { System.out.println("Palavra reservada: Entrada padrão");}
+| <BOOL> { System.out.println("Palavra reservada: Type [bool]");}
+
+)*
+<EOF> 
+
+
+}
+
+
+
+
+

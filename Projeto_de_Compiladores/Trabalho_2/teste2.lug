@@ -1,0 +1,16 @@
+void main{
+	let int var1;
+	let int result;
+
+	var1 := readIO;
+	result := Fatorial(var1)
+	printIO result;
+}
+
+Fatorial(int n) {
+    if (n == 0 || n == 1) {
+        return 1;
+    } else {
+        return n * Fatorial(n - 1);
+    }
+}

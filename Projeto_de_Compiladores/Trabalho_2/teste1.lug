@@ -1,0 +1,13 @@
+void main{
+ let float var1;
+ let float var2;
+ let float result;
+ let bool teste;
+ teste := true;
+  while (teste == false){
+   var1 := readIO;
+   var2 := readIO;
+   restul := (var1 + var2) / 2;
+   printIO restult;  
+  }
+}
